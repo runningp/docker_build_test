@@ -8,6 +8,7 @@ pipeline {
 			}
 		}
 		stage('Push') {
+			agent any
 			steps {
 				withDockerRegistry([ credentialsId: "cnVubmluZ3A6NjU0MzIxIQ==", url: "" ]) {
 					sh 'docker push ubuntu'
