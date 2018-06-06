@@ -4,7 +4,6 @@ pipeline {
 		stage('Build') {
 			agent any
 			steps {
-				sh 'cd src .'
 				sh 'docker build -f "Dockerfile" -t ubuntu .'
 			}
 		}
