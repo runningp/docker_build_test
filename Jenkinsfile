@@ -11,7 +11,7 @@ pipeline {
 			agent any
 			steps {
 				withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
-					sh 'docker push runningp/test1 .'
+					sh 'docker push runningp/test1'
 				}
 			}
 		}
